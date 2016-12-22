@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Edit a Duck Duck Dashboard | Coding Dojo</title>
+        <link rel="stylesheet" href="css/site.css" media="screen" title="no title">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Edit Your Duck...</h1>
+            <form class="" action="/ducks/<%= duck.id %>/edit" method="post">
+                <input type="text" name="name" value="<%= duck.name %>">
+                <input type="text" name="duckType" value="<%= duck.duckType %>">
+                <input type="text" name="age" value="<%= duck.age %>">
+                <input type="submit" name="submit" value="Edit the Duck">
+            </form>
+        </div>
+    </body>
+</html>

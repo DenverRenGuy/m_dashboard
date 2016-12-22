@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ducks Dashboard | Coding Dojo Assignment</title>
+        <link rel="stylesheet" href="css/site.css" media="screen" title="no title">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Welcome to the Ducks Dashboard</h1>
+            <table>
+                <% for (var i=0; i<ducks.length; i++) { %>
+                    <tr>
+                        <td><a href="/ducks/<%= ducks[i].id%>"><%= ducks[i].name %></a></td>
+                        <td><%= ducks[i].id %></td>
+                        <td><%= ducks[i].duckType %></td>
+                        <td><%= ducks[i].age %></td>
+                        <td><a href="/ducks/<%= ducks[i].id %>/edit">Edit</a></td>
+                        <td><form class="" action="/ducks/<%= ducks[i].id %>/destroy" method="post">
+                            <input type="submit" name="submit" value="Remove">
+                        </form></td>
+                    </tr>
+                <% } %>
+            </table>
+
+            <a href="/new">Click here to add a new duck</a>
+        </div>
+
+    </body>
+</html>
